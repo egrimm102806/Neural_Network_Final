@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Neural Network Visualization</h1>
+        
+        <div class="animation-section">
+            <h2>Layer 1: Input to Hidden</h2>
+            <canvas id="networkCanvas1"></canvas>
+            <div class="section-controls">
+                <button class="layer1-btn" id="startBtn1">Start</button>
+                <button class="layer1-btn" id="stopBtn1">Stop</button>
+                <button class="layer1-btn" id="resetBtn1">Reset</button>
+            </div>
+            <div class="calculation-inputs">
+                <label>Input 1: <input type="number" step="0.1" id="inputVal1" value="1.0"></label>
+                <label>Input 2: <input type="number" step="0.1" id="inputVal2" value="1.0"></label>
+                <div class="note">Bias is fixed at 1.0</div>
+            </div>
+            <div class="calculation" id="calc1"></div>
+        </div>
+        
+        <div class="animation-section">
+            <h2>Layer 2: Hidden to Output (with Sigmoid)</h2>
+            <canvas id="networkCanvas2"></canvas>
+            <div class="section-controls">
+                <button class="layer2-btn" id="startBtn2">Start</button>
+                <button class="layer2-btn" id="stopBtn2">Stop</button>
+                <button class="layer2-btn" id="resetBtn2">Reset</button>
+            </div>
+            <div class="calculation" id="calc2"></div>
+        </div>
+        
+        <div class="animation-section">
+            <h2>Layer 3: Multi-layer Network (2-2-1)</h2>
+            <canvas id="networkCanvas3"></canvas>
+            <div class="section-controls">
+                <button class="layer3-btn" id="startBtn3">Start</button>
+                <button class="layer3-btn" id="stopBtn3">Stop</button>
+                <button class="layer3-btn" id="resetBtn3">Reset</button>
+            </div>
+            <div class="calculation" id="calc3"></div>
+        </div>
+        <div class="info">
+            <p>Red dots represent signals flowing through neurons in a neural network</p>
+        </div>
+    </div>
+    <script src="network.js"></script>
+</body>
+</html>
